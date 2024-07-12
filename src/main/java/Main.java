@@ -13,8 +13,10 @@ public class Main {
                 .peek(System.out::println)
                 .toList();
 
-        int sum = doubledNumbers.stream().reduce(0, Integer::sum);
-        System.out.println(sum);
+        int sum = numbers.stream().reduce(0, Integer::sum);
+        int doubledSum = doubledNumbers.stream().reduce(0, Integer::sum);
+        System.out.println("Sum of Numbers: " + sum);
+        System.out.println("Sum of doubled Numbers: " + doubledSum);
 
 
     }
