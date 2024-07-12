@@ -9,12 +9,15 @@ public class Main {
 
         List<Integer> doubledNumbers = numbers.stream()
                 .map(number-> number * 2)
+                .toList();
+
+        List<Integer> sortedNumbers = numbers.stream()
                 .sorted()
-                .peek(System.out::println)
                 .toList();
 
         int sum = numbers.stream().reduce(0, Integer::sum);
         int doubledSum = doubledNumbers.stream().reduce(0, Integer::sum);
+
         System.out.println("Sum of Numbers: " + sum);
         System.out.println("Sum of doubled Numbers: " + doubledSum);
 
